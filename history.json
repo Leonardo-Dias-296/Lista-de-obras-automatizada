@@ -1,0 +1,477 @@
+[
+  {
+    "cliente": "r",
+    "data": "2026-04-13",
+    "equipe": "re",
+    "cod_obra": "",
+    "modulos": 10,
+    "potencia": "610",
+    "inversor": "15Kw Solis",
+    "cidade": "sao jose",
+    "cabo_ca": "35",
+    "cabo_cc": "55",
+    "ts_geracao": "2026-04-12 22:53:11"
+  },
+  {
+    "cliente": "Test User",
+    "data": "2026-04-21",
+    "equipe": "re",
+    "cod_obra": "",
+    "modulos": 5,
+    "potencia": "455",
+    "inversor": "Solis 3Kw",
+    "cidade": "Taquari",
+    "cabo_ca": "",
+    "cabo_cc": "",
+    "ts_geracao": "2026-04-20 22:23:17"
+  },
+  {
+    "cliente": "Test User",
+    "data": "2026-04-21",
+    "equipe": "",
+    "cod_obra": "",
+    "modulos": 66,
+    "potencia": "666",
+    "inversor": "15Kw Solis",
+    "cidade": "Lajeado",
+    "cabo_ca": "",
+    "cabo_cc": "",
+    "ts_geracao": "2026-04-20 22:35:45"
+  },
+  {
+    "cliente": "Test User",
+    "data": "2026-04-21",
+    "equipe": "",
+    "cod_obra": "",
+    "modulos": 66,
+    "potencia": "666",
+    "inversor": "15Kw Solis",
+    "cidade": "Taquari",
+    "cabo_ca": "",
+    "cabo_cc": "",
+    "ts_geracao": "2026-04-20 22:35:45"
+  },
+  {
+    "cliente": "Test User",
+    "data": "2026-04-21",
+    "equipe": "",
+    "cod_obra": "",
+    "modulos": 10,
+    "potencia": "666",
+    "inversor": "15Kw Solis",
+    "cidade": "Taquari",
+    "cabo_ca": "",
+    "cabo_cc": "",
+    "ts_geracao": "2026-04-20 22:35:45"
+  },
+  {
+    "cliente": "Test User",
+    "data": "2026-04-21",
+    "equipe": "",
+    "cod_obra": "",
+    "modulos": 20,
+    "potencia": "576",
+    "inversor": "Chint 5Kw",
+    "qtd_inversores": 2,
+    "cidade": "Triunfo",
+    "cabo_ca": "",
+    "cabo_cc": "",
+    "ts_geracao": "2026-04-20 22:45:02"
+  },
+  {
+    "cliente": "Test User",
+    "data": "2026-04-21",
+    "equipe": "re",
+    "cod_obra": "",
+    "modulos": 7,
+    "potencia": "630",
+    "inversor": "Chint 5Kw",
+    "qtd_inversores": 1,
+    "cidade": "Lajeado",
+    "cabo_ca": "",
+    "cabo_cc": "",
+    "ts_geracao": "2026-04-20 22:59:22"
+  },
+  {
+    "cliente": "eu",
+    "data": "2026-04-22",
+    "equipe": "re",
+    "cod_obra": "",
+    "modulos": [
+      {
+        "potencia": "565",
+        "qtd": 1
+      }
+    ],
+    "potencia": "",
+    "inversores": [
+      {
+        "nome": "Chint 5Kw",
+        "qtd": 1
+      }
+    ],
+    "extras": [
+      {
+        "nome": "Madeira",
+        "qtd": "1"
+      },
+      {
+        "nome": "isolador",
+        "qtd": "1"
+      }
+    ],
+    "cidade": "Tabaí",
+    "ts_geracao": "2026-04-21 21:24:11"
+  },
+  {
+    "cliente": "Test User",
+    "data": "2026-04-22",
+    "equipe": "re",
+    "cod_obra": "",
+    "modulos": [
+      {
+        "potencia": "609",
+        "qtd": 10
+      }
+    ],
+    "potencia": "",
+    "inversores": [
+      {
+        "nome": "Chint 5Kw",
+        "qtd": 1
+      }
+    ],
+    "extras": [
+      {
+        "nome": "isolador",
+        "qtd": "2"
+      },
+      {
+        "nome": "Ferro de Elevação",
+        "qtd": "10"
+      },
+      {
+        "nome": "multiplex 10mm",
+        "qtd": "18"
+      },
+      {
+        "nome": "terminal 10mm",
+        "qtd": "10"
+      },
+      {
+        "nome": "split bold 10mm",
+        "qtd": "4"
+      }
+    ],
+    "cidade": "Taquari",
+    "ts_geracao": "2026-04-21 21:52:59"
+  },
+  {
+    "cliente": "tafi",
+    "data": "2026-05-27",
+    "equipe": "charlie",
+    "cod_obra": "",
+    "modulos": [
+      {
+        "potencia": "450",
+        "qtd": 10
+      }
+    ],
+    "potencia": "",
+    "inversores": [
+      {
+        "nome": "7,5Kw Solis",
+        "qtd": 1
+      }
+    ],
+    "extras": [
+      {
+        "codigo": null,
+        "nome": "cabo 10mm vermelho",
+        "qtd": "100"
+      }
+    ],
+    "cidade": "Taquari",
+    "ts_geracao": "2026-05-26 21:45:33"
+  },
+  {
+    "cliente": "tafi",
+    "data": "2026-05-27",
+    "equipe": "charlie",
+    "cod_obra": "",
+    "modulos": [
+      {
+        "potencia": "450",
+        "qtd": 1
+      }
+    ],
+    "potencia": "",
+    "inversores": [
+      {
+        "nome": "Chint 5Kw",
+        "qtd": 1
+      }
+    ],
+    "extras": [
+      {
+        "codigo": 568,
+        "nome": "CABO CA 10MM AZUL",
+        "qtd": "100"
+      },
+      {
+        "codigo": 567,
+        "nome": "CABO CA 10MM VERMELHO",
+        "qtd": "100"
+      }
+    ],
+    "cidade": "Resto do RS",
+    "ts_geracao": "2026-05-26 22:00:13"
+  },
+  {
+    "cliente": "tafi",
+    "data": "2026-05-27",
+    "equipe": "charlie",
+    "cod_obra": "",
+    "modulos": [
+      {
+        "potencia": "450",
+        "qtd": 6
+      }
+    ],
+    "potencia": "",
+    "inversores": [
+      {
+        "nome": "Chint 5Kw",
+        "qtd": 1
+      }
+    ],
+    "extras": [
+      {
+        "codigo": 568,
+        "nome": "CABO CA 10MM AZUL",
+        "qtd": "100"
+      },
+      {
+        "codigo": 567,
+        "nome": "CABO CA 10MM VERMELHO",
+        "qtd": "100"
+      }
+    ],
+    "cidade": "Resto do RS",
+    "ts_geracao": "2026-05-26 22:01:23"
+  },
+  {
+    "cliente": "tafi",
+    "data": "2026-05-27",
+    "equipe": "charlie",
+    "cod_obra": "",
+    "modulos": [
+      {
+        "potencia": "450",
+        "qtd": 6
+      }
+    ],
+    "potencia": "",
+    "inversores": [
+      {
+        "nome": "Chint 5Kw",
+        "qtd": 1
+      }
+    ],
+    "extras": [
+      {
+        "codigo": 568,
+        "nome": "CABO CA 10MM AZUL",
+        "qtd": "100"
+      },
+      {
+        "codigo": 567,
+        "nome": "CABO CA 10MM VERMELHO",
+        "qtd": "100"
+      }
+    ],
+    "cidade": "Lajeado",
+    "ts_geracao": "2026-05-26 22:02:10"
+  },
+  {
+    "cliente": "tafi",
+    "data": "2026-05-30",
+    "equipe": "charlie",
+    "cod_obra": "",
+    "modulos": [
+      {
+        "potencia": "400",
+        "qtd": 10
+      }
+    ],
+    "potencia": "",
+    "inversores": [
+      {
+        "nome": "Chint 5Kw",
+        "qtd": 1
+      }
+    ],
+    "extras": [],
+    "cidade": "Lajeado",
+    "ts_geracao": "2026-05-29 21:48:59"
+  },
+  {
+    "cliente": "tafi",
+    "data": "2026-05-30",
+    "equipe": "charlie",
+    "cod_obra": "",
+    "modulos": [
+      {
+        "potencia": "400",
+        "qtd": 5
+      }
+    ],
+    "potencia": "",
+    "inversores": [
+      {
+        "nome": "Chint 5Kw",
+        "qtd": 1
+      }
+    ],
+    "extras": [],
+    "cidade": "Lajeado",
+    "ts_geracao": "2026-05-29 22:00:00"
+  },
+  {
+    "cliente": "tafi",
+    "data": "2026-05-30",
+    "equipe": "charlie",
+    "cod_obra": "",
+    "modulos": [
+      {
+        "potencia": "555",
+        "qtd": 1
+      }
+    ],
+    "potencia": "",
+    "inversores": [
+      {
+        "nome": "Chint 5Kw",
+        "qtd": 1
+      }
+    ],
+    "extras": [],
+    "cidade": "Triunfo",
+    "estrutura": "SSM",
+    "ts_geracao": "2026-05-29 22:36:19"
+  },
+  {
+    "cliente": "tafi",
+    "data": "2026-05-30",
+    "equipe": "charlie",
+    "cod_obra": "",
+    "modulos": [
+      {
+        "potencia": "555",
+        "qtd": 1
+      }
+    ],
+    "potencia": "",
+    "inversores": [
+      {
+        "nome": "Chint 5Kw",
+        "qtd": 1
+      }
+    ],
+    "extras": [],
+    "cidade": "Triunfo",
+    "estrutura": "RENOVIGI",
+    "ts_geracao": "2026-05-29 22:37:36"
+  },
+  {
+    "cliente": "teste",
+    "data": "2026-06-07",
+    "equipe": "alpha",
+    "cod_obra": "",
+    "modulos": [
+      {
+        "potencia": "585",
+        "qtd": 10
+      }
+    ],
+    "potencia": "",
+    "inversores": [
+      {
+        "nome": "Chint 5Kw",
+        "qtd": 1
+      }
+    ],
+    "extras": [],
+    "cidade": "Lajeado",
+    "estrutura": "SSM",
+    "ts_geracao": "2026-06-07 15:48:49"
+  },
+  {
+    "cliente": "teste",
+    "data": "2026-06-16",
+    "equipe": "alpha",
+    "cod_obra": "",
+    "modulos": [
+      {
+        "potencia": "610",
+        "qtd": 10
+      }
+    ],
+    "potencia": "",
+    "inversores": [
+      {
+        "nome": "7,5Kw Solis",
+        "qtd": 1
+      }
+    ],
+    "extras": [],
+    "cidade": "Resto do RS",
+    "estrutura": "SSM",
+    "ts_geracao": "2026-06-15 21:46:21"
+  },
+  {
+    "cliente": "tafi",
+    "data": "2026-06-16",
+    "equipe": "",
+    "cod_obra": "",
+    "modulos": [
+      {
+        "potencia": "585",
+        "qtd": 6
+      }
+    ],
+    "potencia": "",
+    "inversores": [
+      {
+        "nome": "7,5Kw Weg Hibrido",
+        "qtd": 1
+      }
+    ],
+    "extras": [],
+    "cidade": "Resto do RS",
+    "estrutura": "SSM",
+    "ts_geracao": "2026-06-15 22:14:33"
+  },
+  {
+    "cliente": "Teste Silva",
+    "data": "2026-06-25",
+    "equipe": "Equipe Alpha",
+    "estrutura": "SSM",
+    "cod_obra": "OBR-TEST",
+    "modulos": [
+      {
+        "qtd": 20,
+        "potencia": 550
+      }
+    ],
+    "cidade": "Lajeado",
+    "inversores": [
+      {
+        "qtd": 1,
+        "nome": "7,5Kw Solis"
+      }
+    ],
+    "extras": [],
+    "ts_geracao": "2026-06-25 21:44:50"
+  }
+]

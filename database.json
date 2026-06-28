@@ -1,0 +1,1955 @@
+{
+  "cidades": {
+    "Lajeado": {
+      "naoadicionar": [
+        {
+          "nome": "Placa Padrão entrada G"
+        }
+      ]
+    },
+    "Resto do RS": {
+      "naoadicionar": []
+    },
+    "Tabaí": {
+      "naoadicionar": [
+        {
+          "nome": "Placa Padrão entrada G"
+        }
+      ]
+    },
+    "Taquari": {
+      "naoadicionar": [
+        {
+          "nome": "Placa Padrão entrada G"
+        }
+      ]
+    },
+    "Triunfo": {
+      "naoadicionar": [
+        {
+          "nome": "Placa Padrão entrada G"
+        }
+      ]
+    }
+  },
+  "estruturas": {
+    "IBRAP": [
+      {
+        "codigo": "",
+        "nome": "Perfil"
+      },
+      {
+        "codigo": "",
+        "nome": "Emenda Barra"
+      },
+      {
+        "codigo": "",
+        "nome": "Emenda Placa"
+      },
+      {
+        "codigo": "",
+        "nome": "canto / Final"
+      },
+      {
+        "codigo": "",
+        "nome": "Terra"
+      },
+      {
+        "codigo": "",
+        "nome": "Conjunto PE EM L PRISIONEIRO"
+      },
+      {
+        "codigo": "",
+        "nome": "Pé \"L\""
+      },
+      {
+        "codigo": "",
+        "nome": "Suporte 10x20"
+      },
+      {
+        "codigo": "",
+        "nome": "Suporte 10x25"
+      },
+      {
+        "codigo": "",
+        "nome": "Suporte 10x30"
+      },
+      {
+        "codigo": "",
+        "nome": "Madeira (Guia)"
+      },
+      {
+        "codigo": "",
+        "nome": "Ferro Elevação"
+      },
+      {
+        "codigo": "",
+        "nome": "Moerão"
+      },
+      {
+        "codigo": "",
+        "nome": "CD Pequena"
+      },
+      {
+        "codigo": "",
+        "nome": "CD Média"
+      },
+      {
+        "codigo": "",
+        "nome": "CD Grande"
+      },
+      {
+        "codigo": "",
+        "nome": "CX Passagem CINZA"
+      },
+      {
+        "codigo": "",
+        "nome": "CX Passagem Branca"
+      },
+      {
+        "codigo": "",
+        "nome": "CX Passagem GD Branca"
+      },
+      {
+        "codigo": "",
+        "nome": "DPS CA 45 KA - 275V"
+      },
+      {
+        "codigo": "",
+        "nome": "DPS CC 40KA - 1040V"
+      },
+      {
+        "codigo": "",
+        "nome": "Conector Haste/ Haste"
+      },
+      {
+        "codigo": "",
+        "nome": "Prensa Cabo 1/2"
+      },
+      {
+        "codigo": "",
+        "nome": "Prensa Cabo 3/4"
+      },
+      {
+        "codigo": "",
+        "nome": "Eletroduto 1\" Branco"
+      },
+      {
+        "codigo": "",
+        "nome": "Eletroduto PVC 1/2 Preto"
+      },
+      {
+        "codigo": "",
+        "nome": "Eletroduto PVC \"1\" Preto"
+      },
+      {
+        "codigo": "",
+        "nome": "Abraçadeira 1/2 metal"
+      },
+      {
+        "codigo": "",
+        "nome": "Abraçadeira PVC 1\""
+      },
+      {
+        "codigo": "",
+        "nome": "ABRAÇADEIRA metal 1'"
+      },
+      {
+        "codigo": "",
+        "nome": "JOELHO COM VIGIA 1\" PVC"
+      },
+      {
+        "codigo": "",
+        "nome": "CABO CA 04MM VERDE"
+      },
+      {
+        "codigo": "",
+        "nome": "CABO CA 06MM AZUL"
+      },
+      {
+        "codigo": "",
+        "nome": "CABO CA 06MM VERMELHO"
+      },
+      {
+        "codigo": "",
+        "nome": "CABO CA 10MM AZUL"
+      },
+      {
+        "codigo": "",
+        "nome": "CABO CA 10MM VERMELHO"
+      },
+      {
+        "codigo": "",
+        "nome": "Fio CC 4MM PRETO"
+      },
+      {
+        "codigo": "",
+        "nome": "Fio CC 4MM VERMELHO"
+      },
+      {
+        "codigo": "",
+        "nome": "Fio CC 4MM VERDE"
+      },
+      {
+        "codigo": "",
+        "nome": "Conector Perfurante Piercing P"
+      },
+      {
+        "codigo": "",
+        "nome": "Conector MC4"
+      },
+      {
+        "codigo": "",
+        "nome": "Placa Padrão entrada P"
+      },
+      {
+        "codigo": "",
+        "nome": "Placa Padrão entrada G"
+      },
+      {
+        "codigo": "",
+        "nome": "Placa propaganda P"
+      },
+      {
+        "codigo": "",
+        "nome": "Placa propaganda G"
+      }
+    ],
+    "MINI TRILHO ALTO IBRAP": [
+      {
+        "codigo": "",
+        "nome": "Perfil"
+      },
+      {
+        "codigo": "",
+        "nome": "Emenda Barra"
+      },
+      {
+        "codigo": "",
+        "nome": "Emenda Placa"
+      },
+      {
+        "codigo": "",
+        "nome": "canto / Final"
+      },
+      {
+        "codigo": "",
+        "nome": "Terra"
+      },
+      {
+        "codigo": "",
+        "nome": "Conjunto PE EM L PRISIONEIRO"
+      },
+      {
+        "codigo": "",
+        "nome": "Pé \"L\""
+      },
+      {
+        "codigo": "",
+        "nome": "Suporte 10x20"
+      },
+      {
+        "codigo": "",
+        "nome": "Suporte 10x25"
+      },
+      {
+        "codigo": "",
+        "nome": "Suporte 10x30"
+      },
+      {
+        "codigo": "",
+        "nome": "Madeira (Guia)"
+      },
+      {
+        "codigo": "",
+        "nome": "Ferro Elevação"
+      },
+      {
+        "codigo": "",
+        "nome": "Moerão"
+      },
+      {
+        "codigo": "",
+        "nome": "CD Pequena"
+      },
+      {
+        "codigo": "",
+        "nome": "CD Média"
+      },
+      {
+        "codigo": "",
+        "nome": "CD Grande"
+      },
+      {
+        "codigo": "",
+        "nome": "CX Passagem CINZA"
+      },
+      {
+        "codigo": "",
+        "nome": "CX Passagem Branca"
+      },
+      {
+        "codigo": "",
+        "nome": "CX Passagem GD Branca"
+      },
+      {
+        "codigo": "",
+        "nome": "DPS CA 45 KA - 275V"
+      },
+      {
+        "codigo": "",
+        "nome": "DPS CC 40KA - 1040V"
+      },
+      {
+        "codigo": "",
+        "nome": "Conector Haste/ Haste"
+      },
+      {
+        "codigo": "",
+        "nome": "Prensa Cabo 1/2"
+      },
+      {
+        "codigo": "",
+        "nome": "Prensa Cabo 3/4"
+      },
+      {
+        "codigo": "",
+        "nome": "Eletroduto 1\" Branco"
+      },
+      {
+        "codigo": "",
+        "nome": "Eletroduto PVC 1/2 Preto"
+      },
+      {
+        "codigo": "",
+        "nome": "Eletroduto PVC \"1\" Preto"
+      },
+      {
+        "codigo": "",
+        "nome": "Abraçadeira 1/2 metal"
+      },
+      {
+        "codigo": "",
+        "nome": "Abraçadeira PVC 1\""
+      },
+      {
+        "codigo": "",
+        "nome": "ABRAÇADEIRA metal 1'"
+      },
+      {
+        "codigo": "",
+        "nome": "JOELHO COM VIGIA 1\" PVC"
+      },
+      {
+        "codigo": "",
+        "nome": "CABO CA 04MM VERDE"
+      },
+      {
+        "codigo": "",
+        "nome": "CABO CA 06MM AZUL"
+      },
+      {
+        "codigo": "",
+        "nome": "CABO CA 06MM VERMELHO"
+      },
+      {
+        "codigo": "",
+        "nome": "CABO CA 10MM AZUL"
+      },
+      {
+        "codigo": "",
+        "nome": "CABO CA 10MM VERMELHO"
+      },
+      {
+        "codigo": "",
+        "nome": "Fio CC 4MM PRETO"
+      },
+      {
+        "codigo": "",
+        "nome": "Fio CC 4MM VERMELHO"
+      },
+      {
+        "codigo": "",
+        "nome": "Fio CC 4MM VERDE"
+      },
+      {
+        "codigo": "",
+        "nome": "Conector Perfurante Piercing P"
+      },
+      {
+        "codigo": "",
+        "nome": "Conector MC4"
+      },
+      {
+        "codigo": "",
+        "nome": "Placa Padrão entrada P"
+      },
+      {
+        "codigo": "",
+        "nome": "Placa Padrão entrada G"
+      },
+      {
+        "codigo": "",
+        "nome": "Placa propaganda P"
+      },
+      {
+        "codigo": "",
+        "nome": "Placa propaganda G"
+      }
+    ],
+    "MINI TRILHO ALTO PRATYC": [
+      {
+        "codigo": "",
+        "nome": "Perfil"
+      },
+      {
+        "codigo": "",
+        "nome": "Emenda Barra"
+      },
+      {
+        "codigo": "",
+        "nome": "Emenda Placa"
+      },
+      {
+        "codigo": "",
+        "nome": "canto / Final"
+      },
+      {
+        "codigo": "",
+        "nome": "Terra"
+      },
+      {
+        "codigo": "",
+        "nome": "Conjunto PE EM L PRISIONEIRO"
+      },
+      {
+        "codigo": "",
+        "nome": "Pé \"L\""
+      },
+      {
+        "codigo": "",
+        "nome": "Suporte 10x20"
+      },
+      {
+        "codigo": "",
+        "nome": "Suporte 10x25"
+      },
+      {
+        "codigo": "",
+        "nome": "Suporte 10x30"
+      },
+      {
+        "codigo": "",
+        "nome": "Madeira (Guia)"
+      },
+      {
+        "codigo": "",
+        "nome": "Ferro Elevação"
+      },
+      {
+        "codigo": "",
+        "nome": "Moerão"
+      },
+      {
+        "codigo": "",
+        "nome": "CD Pequena"
+      },
+      {
+        "codigo": "",
+        "nome": "CD Média"
+      },
+      {
+        "codigo": "",
+        "nome": "CD Grande"
+      },
+      {
+        "codigo": "",
+        "nome": "CX Passagem CINZA"
+      },
+      {
+        "codigo": "",
+        "nome": "CX Passagem Branca"
+      },
+      {
+        "codigo": "",
+        "nome": "CX Passagem GD Branca"
+      },
+      {
+        "codigo": "",
+        "nome": "DPS CA 45 KA - 275V"
+      },
+      {
+        "codigo": "",
+        "nome": "DPS CC 40KA - 1040V"
+      },
+      {
+        "codigo": "",
+        "nome": "Conector Haste/ Haste"
+      },
+      {
+        "codigo": "",
+        "nome": "Prensa Cabo 1/2"
+      },
+      {
+        "codigo": "",
+        "nome": "Prensa Cabo 3/4"
+      },
+      {
+        "codigo": "",
+        "nome": "Eletroduto 1\" Branco"
+      },
+      {
+        "codigo": "",
+        "nome": "Eletroduto PVC 1/2 Preto"
+      },
+      {
+        "codigo": "",
+        "nome": "Eletroduto PVC \"1\" Preto"
+      },
+      {
+        "codigo": "",
+        "nome": "Abraçadeira 1/2 metal"
+      },
+      {
+        "codigo": "",
+        "nome": "Abraçadeira PVC 1\""
+      },
+      {
+        "codigo": "",
+        "nome": "ABRAÇADEIRA metal 1'"
+      },
+      {
+        "codigo": "",
+        "nome": "JOELHO COM VIGIA 1\" PVC"
+      },
+      {
+        "codigo": "",
+        "nome": "CABO CA 04MM VERDE"
+      },
+      {
+        "codigo": "",
+        "nome": "CABO CA 06MM AZUL"
+      },
+      {
+        "codigo": "",
+        "nome": "CABO CA 06MM VERMELHO"
+      },
+      {
+        "codigo": "",
+        "nome": "CABO CA 10MM AZUL"
+      },
+      {
+        "codigo": "",
+        "nome": "CABO CA 10MM VERMELHO"
+      },
+      {
+        "codigo": "",
+        "nome": "Fio CC 4MM PRETO"
+      },
+      {
+        "codigo": "",
+        "nome": "Fio CC 4MM VERMELHO"
+      },
+      {
+        "codigo": "",
+        "nome": "Fio CC 4MM VERDE"
+      },
+      {
+        "codigo": "",
+        "nome": "Conector Perfurante Piercing P"
+      },
+      {
+        "codigo": "",
+        "nome": "Conector MC4"
+      },
+      {
+        "codigo": "",
+        "nome": "Placa Padrão entrada P"
+      },
+      {
+        "codigo": "",
+        "nome": "Placa Padrão entrada G"
+      },
+      {
+        "codigo": "",
+        "nome": "Placa propaganda P"
+      },
+      {
+        "codigo": "",
+        "nome": "Placa propaganda G"
+      }
+    ],
+    "MINI TRILHO BAIXO IBRAP": [
+      {
+        "codigo": "",
+        "nome": "Perfil"
+      },
+      {
+        "codigo": "",
+        "nome": "Emenda Barra"
+      },
+      {
+        "codigo": "",
+        "nome": "Emenda Placa"
+      },
+      {
+        "codigo": "",
+        "nome": "canto / Final"
+      },
+      {
+        "codigo": "",
+        "nome": "Terra"
+      },
+      {
+        "codigo": "",
+        "nome": "Conjunto PE EM L PRISIONEIRO"
+      },
+      {
+        "codigo": "",
+        "nome": "Pé \"L\""
+      },
+      {
+        "codigo": "",
+        "nome": "Suporte 10x20"
+      },
+      {
+        "codigo": "",
+        "nome": "Suporte 10x25"
+      },
+      {
+        "codigo": "",
+        "nome": "Suporte 10x30"
+      },
+      {
+        "codigo": "",
+        "nome": "Madeira (Guia)"
+      },
+      {
+        "codigo": "",
+        "nome": "Ferro Elevação"
+      },
+      {
+        "codigo": "",
+        "nome": "Moerão"
+      },
+      {
+        "codigo": "",
+        "nome": "CD Pequena"
+      },
+      {
+        "codigo": "",
+        "nome": "CD Média"
+      },
+      {
+        "codigo": "",
+        "nome": "CD Grande"
+      },
+      {
+        "codigo": "",
+        "nome": "CX Passagem CINZA"
+      },
+      {
+        "codigo": "",
+        "nome": "CX Passagem Branca"
+      },
+      {
+        "codigo": "",
+        "nome": "CX Passagem GD Branca"
+      },
+      {
+        "codigo": "",
+        "nome": "DPS CA 45 KA - 275V"
+      },
+      {
+        "codigo": "",
+        "nome": "DPS CC 40KA - 1040V"
+      },
+      {
+        "codigo": "",
+        "nome": "Conector Haste/ Haste"
+      },
+      {
+        "codigo": "",
+        "nome": "Prensa Cabo 1/2"
+      },
+      {
+        "codigo": "",
+        "nome": "Prensa Cabo 3/4"
+      },
+      {
+        "codigo": "",
+        "nome": "Eletroduto 1\" Branco"
+      },
+      {
+        "codigo": "",
+        "nome": "Eletroduto PVC 1/2 Preto"
+      },
+      {
+        "codigo": "",
+        "nome": "Eletroduto PVC \"1\" Preto"
+      },
+      {
+        "codigo": "",
+        "nome": "Abraçadeira 1/2 metal"
+      },
+      {
+        "codigo": "",
+        "nome": "Abraçadeira PVC 1\""
+      },
+      {
+        "codigo": "",
+        "nome": "ABRAÇADEIRA metal 1'"
+      },
+      {
+        "codigo": "",
+        "nome": "JOELHO COM VIGIA 1\" PVC"
+      },
+      {
+        "codigo": "",
+        "nome": "CABO CA 04MM VERDE"
+      },
+      {
+        "codigo": "",
+        "nome": "CABO CA 06MM AZUL"
+      },
+      {
+        "codigo": "",
+        "nome": "CABO CA 06MM VERMELHO"
+      },
+      {
+        "codigo": "",
+        "nome": "CABO CA 10MM AZUL"
+      },
+      {
+        "codigo": "",
+        "nome": "CABO CA 10MM VERMELHO"
+      },
+      {
+        "codigo": "",
+        "nome": "Fio CC 4MM PRETO"
+      },
+      {
+        "codigo": "",
+        "nome": "Fio CC 4MM VERMELHO"
+      },
+      {
+        "codigo": "",
+        "nome": "Fio CC 4MM VERDE"
+      },
+      {
+        "codigo": "",
+        "nome": "Conector Perfurante Piercing P"
+      },
+      {
+        "codigo": "",
+        "nome": "Conector MC4"
+      },
+      {
+        "codigo": "",
+        "nome": "Placa Padrão entrada P"
+      },
+      {
+        "codigo": "",
+        "nome": "Placa Padrão entrada G"
+      },
+      {
+        "codigo": "",
+        "nome": "Placa propaganda P"
+      },
+      {
+        "codigo": "",
+        "nome": "Placa propaganda G"
+      }
+    ],
+    "OBRA DE SOLO": [
+      {
+        "codigo": "",
+        "nome": "Perfil"
+      },
+      {
+        "codigo": "",
+        "nome": "Emenda Barra"
+      },
+      {
+        "codigo": "",
+        "nome": "Emenda Placa"
+      },
+      {
+        "codigo": "",
+        "nome": "canto / Final"
+      },
+      {
+        "codigo": "",
+        "nome": "Terra"
+      },
+      {
+        "codigo": "",
+        "nome": "Conjunto PE EM L PRISIONEIRO"
+      },
+      {
+        "codigo": "",
+        "nome": "Pé \"L\""
+      },
+      {
+        "codigo": "",
+        "nome": "Suporte 10x20"
+      },
+      {
+        "codigo": "",
+        "nome": "Suporte 10x25"
+      },
+      {
+        "codigo": "",
+        "nome": "Suporte 10x30"
+      },
+      {
+        "codigo": "",
+        "nome": "Madeira (Guia)"
+      },
+      {
+        "codigo": "",
+        "nome": "Ferro Elevação"
+      },
+      {
+        "codigo": "",
+        "nome": "Moerão"
+      },
+      {
+        "codigo": "",
+        "nome": "CD Pequena"
+      },
+      {
+        "codigo": "",
+        "nome": "CD Média"
+      },
+      {
+        "codigo": "",
+        "nome": "CD Grande"
+      },
+      {
+        "codigo": "",
+        "nome": "CX Passagem CINZA"
+      },
+      {
+        "codigo": "",
+        "nome": "CX Passagem Branca"
+      },
+      {
+        "codigo": "",
+        "nome": "CX Passagem GD Branca"
+      },
+      {
+        "codigo": "",
+        "nome": "DPS CA 45 KA - 275V"
+      },
+      {
+        "codigo": "",
+        "nome": "DPS CC 40KA - 1040V"
+      },
+      {
+        "codigo": "",
+        "nome": "Conector Haste/ Haste"
+      },
+      {
+        "codigo": "",
+        "nome": "Prensa Cabo 1/2"
+      },
+      {
+        "codigo": "",
+        "nome": "Prensa Cabo 3/4"
+      },
+      {
+        "codigo": "",
+        "nome": "Eletroduto 1\" Branco"
+      },
+      {
+        "codigo": "",
+        "nome": "Eletroduto PVC 1/2 Preto"
+      },
+      {
+        "codigo": "",
+        "nome": "Eletroduto PVC \"1\" Preto"
+      },
+      {
+        "codigo": "",
+        "nome": "Abraçadeira 1/2 metal"
+      },
+      {
+        "codigo": "",
+        "nome": "Abraçadeira PVC 1\""
+      },
+      {
+        "codigo": "",
+        "nome": "ABRAÇADEIRA metal 1'"
+      },
+      {
+        "codigo": "",
+        "nome": "JOELHO COM VIGIA 1\" PVC"
+      },
+      {
+        "codigo": "",
+        "nome": "CABO CA 04MM VERDE"
+      },
+      {
+        "codigo": "",
+        "nome": "CABO CA 06MM AZUL"
+      },
+      {
+        "codigo": "",
+        "nome": "CABO CA 06MM VERMELHO"
+      },
+      {
+        "codigo": "",
+        "nome": "CABO CA 10MM AZUL"
+      },
+      {
+        "codigo": "",
+        "nome": "CABO CA 10MM VERMELHO"
+      },
+      {
+        "codigo": "",
+        "nome": "Fio CC 4MM PRETO"
+      },
+      {
+        "codigo": "",
+        "nome": "Fio CC 4MM VERMELHO"
+      },
+      {
+        "codigo": "",
+        "nome": "Fio CC 4MM VERDE"
+      },
+      {
+        "codigo": "",
+        "nome": "Conector Perfurante Piercing P"
+      },
+      {
+        "codigo": "",
+        "nome": "Conector MC4"
+      },
+      {
+        "codigo": "",
+        "nome": "Placa Padrão entrada P"
+      },
+      {
+        "codigo": "",
+        "nome": "Placa Padrão entrada G"
+      },
+      {
+        "codigo": "",
+        "nome": "Placa propaganda P"
+      },
+      {
+        "codigo": "",
+        "nome": "Placa propaganda G"
+      }
+    ],
+    "PRATYC": [
+      {
+        "codigo": "",
+        "nome": "Perfil"
+      },
+      {
+        "codigo": "",
+        "nome": "Emenda Barra"
+      },
+      {
+        "codigo": "",
+        "nome": "Emenda Placa"
+      },
+      {
+        "codigo": "",
+        "nome": "canto / Final"
+      },
+      {
+        "codigo": "",
+        "nome": "Terra"
+      },
+      {
+        "codigo": "",
+        "nome": "Conjunto PE EM L PRISIONEIRO"
+      },
+      {
+        "codigo": "",
+        "nome": "Pé \"L\""
+      },
+      {
+        "codigo": "",
+        "nome": "Suporte 10x20"
+      },
+      {
+        "codigo": "",
+        "nome": "Suporte 10x25"
+      },
+      {
+        "codigo": "",
+        "nome": "Suporte 10x30"
+      },
+      {
+        "codigo": "",
+        "nome": "Madeira (Guia)"
+      },
+      {
+        "codigo": "",
+        "nome": "Ferro Elevação"
+      },
+      {
+        "codigo": "",
+        "nome": "Moerão"
+      },
+      {
+        "codigo": "",
+        "nome": "CD Pequena"
+      },
+      {
+        "codigo": "",
+        "nome": "CD Média"
+      },
+      {
+        "codigo": "",
+        "nome": "CD Grande"
+      },
+      {
+        "codigo": "",
+        "nome": "CX Passagem CINZA"
+      },
+      {
+        "codigo": "",
+        "nome": "CX Passagem Branca"
+      },
+      {
+        "codigo": "",
+        "nome": "CX Passagem GD Branca"
+      },
+      {
+        "codigo": "",
+        "nome": "DPS CA 45 KA - 275V"
+      },
+      {
+        "codigo": "",
+        "nome": "DPS CC 40KA - 1040V"
+      },
+      {
+        "codigo": "",
+        "nome": "Conector Haste/ Haste"
+      },
+      {
+        "codigo": "",
+        "nome": "Prensa Cabo 1/2"
+      },
+      {
+        "codigo": "",
+        "nome": "Prensa Cabo 3/4"
+      },
+      {
+        "codigo": "",
+        "nome": "Eletroduto 1\" Branco"
+      },
+      {
+        "codigo": "",
+        "nome": "Eletroduto PVC 1/2 Preto"
+      },
+      {
+        "codigo": "",
+        "nome": "Eletroduto PVC \"1\" Preto"
+      },
+      {
+        "codigo": "",
+        "nome": "Abraçadeira 1/2 metal"
+      },
+      {
+        "codigo": "",
+        "nome": "Abraçadeira PVC 1\""
+      },
+      {
+        "codigo": "",
+        "nome": "ABRAÇADEIRA metal 1'"
+      },
+      {
+        "codigo": "",
+        "nome": "JOELHO COM VIGIA 1\" PVC"
+      },
+      {
+        "codigo": "",
+        "nome": "CABO CA 04MM VERDE"
+      },
+      {
+        "codigo": "",
+        "nome": "CABO CA 06MM AZUL"
+      },
+      {
+        "codigo": "",
+        "nome": "CABO CA 06MM VERMELHO"
+      },
+      {
+        "codigo": "",
+        "nome": "CABO CA 10MM AZUL"
+      },
+      {
+        "codigo": "",
+        "nome": "CABO CA 10MM VERMELHO"
+      },
+      {
+        "codigo": "",
+        "nome": "Fio CC 4MM PRETO"
+      },
+      {
+        "codigo": "",
+        "nome": "Fio CC 4MM VERMELHO"
+      },
+      {
+        "codigo": "",
+        "nome": "Fio CC 4MM VERDE"
+      },
+      {
+        "codigo": "",
+        "nome": "Conector Perfurante Piercing P"
+      },
+      {
+        "codigo": "",
+        "nome": "Conector MC4"
+      },
+      {
+        "codigo": "",
+        "nome": "Placa Padrão entrada P"
+      },
+      {
+        "codigo": "",
+        "nome": "Placa Padrão entrada G"
+      },
+      {
+        "codigo": "",
+        "nome": "Placa propaganda P"
+      },
+      {
+        "codigo": "",
+        "nome": "Placa propaganda G"
+      }
+    ],
+    "RENOVIGI": [
+      {
+        "codigo": "",
+        "nome": "Perfil"
+      },
+      {
+        "codigo": "",
+        "nome": "Emenda Barra"
+      },
+      {
+        "codigo": "",
+        "nome": "Emenda Placa"
+      },
+      {
+        "codigo": "",
+        "nome": "canto / Final"
+      },
+      {
+        "codigo": "",
+        "nome": "Terra"
+      },
+      {
+        "codigo": "",
+        "nome": "Conjunto PE EM L PRISIONEIRO"
+      },
+      {
+        "codigo": "",
+        "nome": "Pé \"L\""
+      },
+      {
+        "codigo": "",
+        "nome": "Suporte 10x20"
+      },
+      {
+        "codigo": "",
+        "nome": "Suporte 10x25"
+      },
+      {
+        "codigo": "",
+        "nome": "Suporte 10x30"
+      },
+      {
+        "codigo": "",
+        "nome": "Madeira (Guia)"
+      },
+      {
+        "codigo": "",
+        "nome": "Ferro Elevação"
+      },
+      {
+        "codigo": "",
+        "nome": "Moerão"
+      },
+      {
+        "codigo": "",
+        "nome": "CD Pequena"
+      },
+      {
+        "codigo": "",
+        "nome": "CD Média"
+      },
+      {
+        "codigo": "",
+        "nome": "CD Grande"
+      },
+      {
+        "codigo": "",
+        "nome": "CX Passagem CINZA"
+      },
+      {
+        "codigo": "",
+        "nome": "CX Passagem Branca"
+      },
+      {
+        "codigo": "",
+        "nome": "CX Passagem GD Branca"
+      },
+      {
+        "codigo": "",
+        "nome": "DPS CA 45 KA - 275V"
+      },
+      {
+        "codigo": "",
+        "nome": "DPS CC 40KA - 1040V"
+      },
+      {
+        "codigo": "",
+        "nome": "Conector Haste/ Haste"
+      },
+      {
+        "codigo": "",
+        "nome": "Prensa Cabo 1/2"
+      },
+      {
+        "codigo": "",
+        "nome": "Prensa Cabo 3/4"
+      },
+      {
+        "codigo": "",
+        "nome": "Eletroduto 1\" Branco"
+      },
+      {
+        "codigo": "",
+        "nome": "Eletroduto PVC 1/2 Preto"
+      },
+      {
+        "codigo": "",
+        "nome": "Eletroduto PVC \"1\" Preto"
+      },
+      {
+        "codigo": "",
+        "nome": "Abraçadeira 1/2 metal"
+      },
+      {
+        "codigo": "",
+        "nome": "Abraçadeira PVC 1\""
+      },
+      {
+        "codigo": "",
+        "nome": "ABRAÇADEIRA metal 1'"
+      },
+      {
+        "codigo": "",
+        "nome": "JOELHO COM VIGIA 1\" PVC"
+      },
+      {
+        "codigo": "",
+        "nome": "CABO CA 04MM VERDE"
+      },
+      {
+        "codigo": "",
+        "nome": "CABO CA 06MM AZUL"
+      },
+      {
+        "codigo": "",
+        "nome": "CABO CA 06MM VERMELHO"
+      },
+      {
+        "codigo": "",
+        "nome": "CABO CA 10MM AZUL"
+      },
+      {
+        "codigo": "",
+        "nome": "CABO CA 10MM VERMELHO"
+      },
+      {
+        "codigo": "",
+        "nome": "Fio CC 4MM PRETO"
+      },
+      {
+        "codigo": "",
+        "nome": "Fio CC 4MM VERMELHO"
+      },
+      {
+        "codigo": "",
+        "nome": "Fio CC 4MM VERDE"
+      },
+      {
+        "codigo": "",
+        "nome": "Conector Perfurante Piercing P"
+      },
+      {
+        "codigo": "",
+        "nome": "Conector MC4"
+      },
+      {
+        "codigo": "",
+        "nome": "Placa Padrão entrada P"
+      },
+      {
+        "codigo": "",
+        "nome": "Placa Padrão entrada G"
+      },
+      {
+        "codigo": "",
+        "nome": "Placa propaganda P"
+      },
+      {
+        "codigo": "",
+        "nome": "Placa propaganda G"
+      }
+    ],
+    "SSM": [
+      {
+        "codigo": 355,
+        "nome": "Perfil"
+      },
+      {
+        "codigo": 351,
+        "nome": "Emenda Barra"
+      },
+      {
+        "codigo": 350,
+        "nome": "Emenda Placa"
+      },
+      {
+        "codigo": 354,
+        "nome": "canto / Final"
+      },
+      {
+        "codigo": 281,
+        "nome": "Terra"
+      },
+      {
+        "codigo": 3724,
+        "nome": "Conjunto PE EM L PRISIONEIRO"
+      },
+      {
+        "codigo": 280,
+        "nome": "Pé \"L\""
+      },
+      {
+        "codigo": 278,
+        "nome": "Suporte 10x20"
+      },
+      {
+        "codigo": 1410,
+        "nome": "Suporte 10x25"
+      },
+      {
+        "codigo": 1699,
+        "nome": "Suporte 10x30"
+      },
+      {
+        "codigo": 1366,
+        "nome": "Madeira (Guia)"
+      },
+      {
+        "codigo": 3725,
+        "nome": "Ferro Elevação"
+      },
+      {
+        "codigo": 3196,
+        "nome": "Moerão"
+      },
+      {
+        "codigo": 252,
+        "nome": "CD Pequena"
+      },
+      {
+        "codigo": 589,
+        "nome": "CD Média"
+      },
+      {
+        "codigo": 1305,
+        "nome": "CD Grande"
+      },
+      {
+        "codigo": 1252,
+        "nome": "CX Passagem CINZA"
+      },
+      {
+        "codigo": 1307,
+        "nome": "CX Passagem Branca"
+      },
+      {
+        "codigo": 1311,
+        "nome": "CX Passagem GD Branca"
+      },
+      {
+        "codigo": 1235,
+        "nome": "DPS CA 45 KA - 275V"
+      },
+      {
+        "codigo": 575,
+        "nome": "DPS CC 40KA - 1040V"
+      },
+      {
+        "codigo": "245/1226",
+        "nome": "Conector Haste/ Haste"
+      },
+      {
+        "codigo": 1260,
+        "nome": "Prensa Cabo 1/2"
+      },
+      {
+        "codigo": 1261,
+        "nome": "Prensa Cabo 3/4"
+      },
+      {
+        "codigo": 266,
+        "nome": "Eletroduto 1\" Branco"
+      },
+      {
+        "codigo": 1228,
+        "nome": "Eletroduto PVC 1/2 Preto"
+      },
+      {
+        "codigo": 232,
+        "nome": "Eletroduto PVC \"1\" Preto"
+      },
+      {
+        "codigo": 1421,
+        "nome": "Abraçadeira 1/2 metal"
+      },
+      {
+        "codigo": 251,
+        "nome": "Abraçadeira PVC 1\""
+      },
+      {
+        "codigo": 1577,
+        "nome": "ABRAÇADEIRA metal 1'"
+      },
+      {
+        "codigo": 1582,
+        "nome": "JOELHO COM VIGIA 1\" PVC"
+      },
+      {
+        "codigo": 31,
+        "nome": "CABO CA 04MM VERDE"
+      },
+      {
+        "codigo": 32,
+        "nome": "CABO CA 06MM AZUL"
+      },
+      {
+        "codigo": 50,
+        "nome": "CABO CA 06MM VERMELHO"
+      },
+      {
+        "codigo": 568,
+        "nome": "CABO CA 10MM AZUL"
+      },
+      {
+        "codigo": 567,
+        "nome": "CABO CA 10MM VERMELHO"
+      },
+      {
+        "codigo": 555,
+        "nome": "Fio CC 4MM PRETO"
+      },
+      {
+        "codigo": 557,
+        "nome": "Fio CC 4MM VERMELHO"
+      },
+      {
+        "codigo": 558,
+        "nome": "Fio CC 4MM VERDE"
+      },
+      {
+        "codigo": 230,
+        "nome": "Conector Perfurante Piercing P"
+      },
+      {
+        "codigo": 282,
+        "nome": "Conector MC4"
+      },
+      {
+        "codigo": 284,
+        "nome": "Placa Padrão entrada P"
+      },
+      {
+        "codigo": 285,
+        "nome": "Placa Padrão entrada G"
+      },
+      {
+        "codigo": 2674,
+        "nome": "Placa propaganda P"
+      },
+      {
+        "codigo": 2696,
+        "nome": "Placa propaganda G"
+      }
+    ]
+  },
+  "inversores": {
+    "4Kw Solis": {
+      "disjuntor_ca": "1x32 / 2x32",
+      "disjuntor_cc": "",
+      "materiais": [
+        {
+          "codigo": null,
+          "nome": "",
+          "qtd": 1
+        }
+      ]
+    },
+    "7,5Kw Nansen": {
+      "disjuntor_ca": "1x40 / 2x40",
+      "disjuntor_cc": "",
+      "materiais": [
+        {
+          "codigo": 1261,
+          "nome": "Prensa Cabo 3/4",
+          "qtd": 1
+        },
+        {
+          "codigo": 252,
+          "nome": "CD Pequena",
+          "qtd": 1
+        },
+        {
+          "codigo": 1307,
+          "nome": "CX Passagem Branca",
+          "qtd": 1
+        },
+        {
+          "codigo": 1235,
+          "nome": "DPS CA 45 KA - 275V",
+          "qtd": 2
+        },
+        {
+          "codigo": "245/1226",
+          "nome": "Conector Haste/ Haste",
+          "qtd": 1
+        },
+        {
+          "codigo": 1260,
+          "nome": "Prensa Cabo 1/2",
+          "qtd": 3
+        },
+        {
+          "codigo": 251,
+          "nome": "Abraçadeira PVC 1\"",
+          "qtd": 2
+        },
+        {
+          "codigo": 230,
+          "nome": "Conector Perfurante Piercing P",
+          "qtd": 2
+        },
+        {
+          "codigo": null,
+          "nome": "",
+          "qtd": 1
+        }
+      ]
+    },
+    "7,5Kw Sofar": {
+      "disjuntor_ca": "1x40 / 2x40",
+      "disjuntor_cc": "",
+      "materiais": [
+        {
+          "codigo": 1261,
+          "nome": "Prensa Cabo 3/4",
+          "qtd": 1
+        },
+        {
+          "codigo": 252,
+          "nome": "CD Pequena",
+          "qtd": 1
+        },
+        {
+          "codigo": 1307,
+          "nome": "CX Passagem Branca",
+          "qtd": 1
+        },
+        {
+          "codigo": 1235,
+          "nome": "DPS CA 45 KA - 275V",
+          "qtd": 2
+        },
+        {
+          "codigo": "245/1226",
+          "nome": "Conector Haste/ Haste",
+          "qtd": 1
+        },
+        {
+          "codigo": 1260,
+          "nome": "Prensa Cabo 1/2",
+          "qtd": 3
+        },
+        {
+          "codigo": 251,
+          "nome": "Abraçadeira PVC 1\"",
+          "qtd": 2
+        },
+        {
+          "codigo": 230,
+          "nome": "Conector Perfurante Piercing P",
+          "qtd": 2
+        },
+        {
+          "codigo": null,
+          "nome": "",
+          "qtd": 1
+        }
+      ]
+    },
+    "7,5Kw Solis": {
+      "disjuntor_ca": "1x40 / 2x40",
+      "disjuntor_cc": "",
+      "materiais": [
+        {
+          "codigo": 1261,
+          "nome": "Prensa Cabo 3/4",
+          "qtd": 1
+        },
+        {
+          "codigo": 252,
+          "nome": "CD Pequena",
+          "qtd": 1
+        },
+        {
+          "codigo": 1307,
+          "nome": "CX Passagem Branca",
+          "qtd": 1
+        },
+        {
+          "codigo": 1235,
+          "nome": "DPS CA 45 KA - 275V",
+          "qtd": 2
+        },
+        {
+          "codigo": "245/1226",
+          "nome": "Conector Haste/ Haste",
+          "qtd": 1
+        },
+        {
+          "codigo": 1260,
+          "nome": "Prensa Cabo 1/2",
+          "qtd": 3
+        },
+        {
+          "codigo": 251,
+          "nome": "Abraçadeira PVC 1\"",
+          "qtd": 2
+        },
+        {
+          "codigo": 230,
+          "nome": "Conector Perfurante Piercing P",
+          "qtd": 2
+        },
+        {
+          "codigo": null,
+          "nome": "",
+          "qtd": 1
+        }
+      ]
+    },
+    "Chint 5Kw": {
+      "disjuntor_ca": "1x32A / 2x32A",
+      "disjuntor_cc": "",
+      "materiais": [
+        {
+          "nome": "CD Pequena",
+          "qtd": 1
+        },
+        {
+          "nome": "DPS CA 45kA / 275V",
+          "qtd": 2
+        },
+        {
+          "nome": "Conector Perfurante Piercing P",
+          "qtd": 2
+        },
+        {
+          "nome": "CX Passagem Branca",
+          "qtd": 1
+        },
+        {
+          "nome": "Prensa Cabo 1/2",
+          "qtd": 3
+        }
+      ]
+    },
+    "Solis 3Kw": {
+      "disjuntor_ca": "1x20A / 2x20A",
+      "disjuntor_cc": "2x 15A",
+      "materiais": [
+        {
+          "nome": "CD Pequena",
+          "qtd": 1
+        },
+        {
+          "nome": "DPS CA 45kA / 275V",
+          "qtd": 2
+        },
+        {
+          "nome": "Conector Perfurante Piercing P",
+          "qtd": 2
+        },
+        {
+          "nome": "CX Passagem Branca",
+          "qtd": 1
+        }
+      ]
+    },
+    "7,5Kw Weg Hibrido": {
+      "disjuntor_ca": "2 de 1x40 / 2 de 2x40",
+      "disjuntor_cc": "",
+      "materiais": [
+        {
+          "nome": "Prensa Cabo 3/4",
+          "codigo": 1261,
+          "qtd": 2
+        },
+        {
+          "nome": "CD Pequena",
+          "codigo": 252,
+          "qtd": 2
+        },
+        {
+          "nome": "CX Passagem Branca",
+          "codigo": 1307,
+          "qtd": 2
+        },
+        {
+          "nome": "DPS CA 45 KA - 275V",
+          "codigo": 1235,
+          "qtd": 4
+        },
+        {
+          "nome": "Conector Haste/ Haste",
+          "codigo": "245/1226",
+          "qtd": 1
+        },
+        {
+          "nome": "Prensa Cabo 1/2",
+          "codigo": 1260,
+          "qtd": 6
+        },
+        {
+          "nome": "Abraçadeira PVC 1\"",
+          "codigo": 251,
+          "qtd": 4
+        },
+        {
+          "nome": "Conector Perfurante Piercing P",
+          "codigo": 230,
+          "qtd": 4
+        },
+        {
+          "nome": "CX Passagem GD Branca",
+          "codigo": 1311,
+          "qtd": 1
+        },
+        {
+          "nome": "CD Média",
+          "codigo": 589,
+          "qtd": 1
+        }
+      ]
+    }
+  },
+  "itensFixos": [
+    {
+      "nome": "Placa Padrão entrada P",
+      "qtd": 2
+    },
+    {
+      "nome": "Placa Padrão entrada G",
+      "qtd": 2
+    }
+  ],
+  "produtos": [
+    {
+      "codigo": 355,
+      "nome": "Perfil"
+    },
+    {
+      "codigo": 351,
+      "nome": "Emenda Barra"
+    },
+    {
+      "codigo": 350,
+      "nome": "Emenda Placa"
+    },
+    {
+      "codigo": 354,
+      "nome": "canto / Final"
+    },
+    {
+      "codigo": 281,
+      "nome": "Terra"
+    },
+    {
+      "codigo": 3724,
+      "nome": "Conjunto PE EM L PRISIONEIRO"
+    },
+    {
+      "codigo": 280,
+      "nome": "Pé \"L\""
+    },
+    {
+      "codigo": 278,
+      "nome": "Suporte 10x20"
+    },
+    {
+      "codigo": 1410,
+      "nome": "Suporte 10x25"
+    },
+    {
+      "codigo": 1699,
+      "nome": "Suporte 10x30"
+    },
+    {
+      "codigo": 1366,
+      "nome": "Madeira (Guia)"
+    },
+    {
+      "codigo": 3725,
+      "nome": "Ferro Elevação"
+    },
+    {
+      "codigo": 3196,
+      "nome": "Moerão"
+    },
+    {
+      "codigo": 252,
+      "nome": "CD Pequena"
+    },
+    {
+      "codigo": 589,
+      "nome": "CD Média"
+    },
+    {
+      "codigo": 1305,
+      "nome": "CD Grande"
+    },
+    {
+      "codigo": 1252,
+      "nome": "CX Passagem CINZA"
+    },
+    {
+      "codigo": 1307,
+      "nome": "CX Passagem Branca"
+    },
+    {
+      "codigo": 1311,
+      "nome": "CX Passagem GD Branca"
+    },
+    {
+      "codigo": 1235,
+      "nome": "DPS CA 45 KA - 275V"
+    },
+    {
+      "codigo": 575,
+      "nome": "DPS CC 40KA - 1040V"
+    },
+    {
+      "codigo": "245/1226",
+      "nome": "Conector Haste/ Haste"
+    },
+    {
+      "codigo": 1260,
+      "nome": "Prensa Cabo 1/2"
+    },
+    {
+      "codigo": 1261,
+      "nome": "Prensa Cabo 3/4"
+    },
+    {
+      "codigo": 266,
+      "nome": "Eletroduto 1\" Branco"
+    },
+    {
+      "codigo": 1228,
+      "nome": "Eletroduto PVC 1/2 Preto"
+    },
+    {
+      "codigo": 232,
+      "nome": "Eletroduto PVC \"1\" Preto"
+    },
+    {
+      "codigo": 1421,
+      "nome": "Abraçadeira 1/2 metal"
+    },
+    {
+      "codigo": 251,
+      "nome": "Abraçadeira PVC 1\""
+    },
+    {
+      "codigo": 1577,
+      "nome": "ABRAÇADEIRA metal 1'"
+    },
+    {
+      "codigo": 1582,
+      "nome": "JOELHO COM VIGIA 1\" PVC"
+    },
+    {
+      "codigo": 31,
+      "nome": "CABO CA 04MM VERDE"
+    },
+    {
+      "codigo": 32,
+      "nome": "CABO CA 06MM AZUL"
+    },
+    {
+      "codigo": 50,
+      "nome": "CABO CA 06MM VERMELHO"
+    },
+    {
+      "codigo": 568,
+      "nome": "CABO CA 10MM AZUL"
+    },
+    {
+      "codigo": 567,
+      "nome": "CABO CA 10MM VERMELHO"
+    },
+    {
+      "codigo": 555,
+      "nome": "Fio CC 4MM PRETO"
+    },
+    {
+      "codigo": 557,
+      "nome": "Fio CC 4MM VERMELHO"
+    },
+    {
+      "codigo": 558,
+      "nome": "Fio CC 4MM VERDE"
+    },
+    {
+      "codigo": 230,
+      "nome": "Conector Perfurante Piercing P"
+    },
+    {
+      "codigo": 282,
+      "nome": "Conector MC4"
+    },
+    {
+      "codigo": 284,
+      "nome": "Placa Padrão entrada P"
+    },
+    {
+      "codigo": 285,
+      "nome": "Placa Padrão entrada G"
+    },
+    {
+      "codigo": 2674,
+      "nome": "Placa propaganda P"
+    },
+    {
+      "codigo": 2696,
+      "nome": "Placa propaganda G"
+    }
+  ]
+}

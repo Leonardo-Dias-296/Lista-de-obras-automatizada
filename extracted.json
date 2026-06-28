@@ -1,0 +1,182 @@
+[
+  {
+    "codigo": 355,
+    "nome": "Perfil"
+  },
+  {
+    "codigo": 351,
+    "nome": "Emenda Barra"
+  },
+  {
+    "codigo": 350,
+    "nome": "Emenda Placa"
+  },
+  {
+    "codigo": 354,
+    "nome": "canto / Final"
+  },
+  {
+    "codigo": 281,
+    "nome": "Terra"
+  },
+  {
+    "codigo": 3724,
+    "nome": "Conjunto PE EM L PRISIONEIRO"
+  },
+  {
+    "codigo": 280,
+    "nome": "Pé \"L\""
+  },
+  {
+    "codigo": 278,
+    "nome": "Suporte 10x20"
+  },
+  {
+    "codigo": 1410,
+    "nome": "Suporte 10x25"
+  },
+  {
+    "codigo": 1699,
+    "nome": "Suporte 10x30"
+  },
+  {
+    "codigo": 1366,
+    "nome": "Madeira (Guia)"
+  },
+  {
+    "codigo": 3725,
+    "nome": "Ferro Elevação"
+  },
+  {
+    "codigo": 3196,
+    "nome": "Moerão"
+  },
+  {
+    "codigo": 252,
+    "nome": "CD Pequena"
+  },
+  {
+    "codigo": 589,
+    "nome": "CD Média"
+  },
+  {
+    "codigo": 1305,
+    "nome": "CD Grande"
+  },
+  {
+    "codigo": 1252,
+    "nome": "CX Passagem CINZA"
+  },
+  {
+    "codigo": 1307,
+    "nome": "CX Passagem Branca"
+  },
+  {
+    "codigo": 1311,
+    "nome": "CX Passagem GD Branca"
+  },
+  {
+    "codigo": 1235,
+    "nome": "DPS CA 45 KA - 275V"
+  },
+  {
+    "codigo": 575,
+    "nome": "DPS CC 40KA - 1040V"
+  },
+  {
+    "codigo": "245/1226",
+    "nome": "Conector Haste/ Haste"
+  },
+  {
+    "codigo": 1260,
+    "nome": "Prensa Cabo 1/2"
+  },
+  {
+    "codigo": 1261,
+    "nome": "Prensa Cabo 3/4"
+  },
+  {
+    "codigo": 266,
+    "nome": "Eletroduto 1\" Branco"
+  },
+  {
+    "codigo": 1228,
+    "nome": "Eletroduto PVC 1/2 Preto"
+  },
+  {
+    "codigo": 232,
+    "nome": "Eletroduto PVC \"1\" Preto"
+  },
+  {
+    "codigo": 1421,
+    "nome": "Abraçadeira 1/2 metal"
+  },
+  {
+    "codigo": 251,
+    "nome": "Abraçadeira PVC 1\""
+  },
+  {
+    "codigo": 1577,
+    "nome": "ABRAÇADEIRA metal 1'"
+  },
+  {
+    "codigo": 1582,
+    "nome": "JOELHO COM VIGIA 1\" PVC"
+  },
+  {
+    "codigo": 31,
+    "nome": "CABO CA 04MM VERDE"
+  },
+  {
+    "codigo": 32,
+    "nome": "CABO CA 06MM AZUL"
+  },
+  {
+    "codigo": 50,
+    "nome": "CABO CA 06MM VERMELHO"
+  },
+  {
+    "codigo": 568,
+    "nome": "CABO CA 10MM AZUL"
+  },
+  {
+    "codigo": 567,
+    "nome": "CABO CA 10MM VERMELHO"
+  },
+  {
+    "codigo": 555,
+    "nome": "Fio CC 4MM PRETO"
+  },
+  {
+    "codigo": 557,
+    "nome": "Fio CC 4MM VERMELHO"
+  },
+  {
+    "codigo": 558,
+    "nome": "Fio CC 4MM VERDE"
+  },
+  {
+    "codigo": 230,
+    "nome": "Conector Perfurante Piercing P"
+  },
+  {
+    "codigo": 282,
+    "nome": "Conector MC4"
+  },
+  {
+    "codigo": 284,
+    "nome": "Placa Padrão entrada P"
+  },
+  {
+    "codigo": 285,
+    "nome": "Placa Padrão entrada G"
+  },
+  {
+    "codigo": 2674,
+    "nome": "Placa propaganda P"
+  },
+  {
+    "codigo": 2696,
+    "nome": "Placa propaganda G"
+  }
+]
