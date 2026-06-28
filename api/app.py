@@ -1,5 +1,6 @@
 from flask import Flask, request, send_file, jsonify
 from flask_cors import CORS
+import traceback
 import openpyxl
 import json
 import io
@@ -18,14 +19,14 @@ REPO_DIR = os.path.join(BASE_DIR, '..')
 def index():
     return jsonify({"status": "ok", "message": "SSM Solar API v2.0"})
 
+@app.errorhandler(Exception)
+def handle_exception(e):
+    return jsonify({"error": str(e), "traceback": traceback.format_exc()}), 500
+
 @app.route('/api/config')
 def config():
-    try:
-        db = load_db()
-        return jsonify(db)
-    except Exception as e:
-        import traceback
-        return jsonify({"error": str(e), "traceback": traceback.format_exc()}), 500
+    db = load_db()
+    return jsonify(db)
 
 @app.route('/api/gerar', methods=['POST'])
 def gerar():
