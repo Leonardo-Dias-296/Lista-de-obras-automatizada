@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react'
+import PasteInfo from './PasteInfo'
 
 export default function Formulario({ db, onCalcular, onAdicionarFila, showToast }) {
   const [cliente, setCliente] = useState('')
@@ -88,6 +89,25 @@ export default function Formulario({ db, onCalcular, onAdicionarFila, showToast 
     setEquipe('')
   }
 
+  function applyPasteData(dados) {
+    if (dados.cliente) setCliente(dados.cliente)
+    if (dados.endereco) setCodObra(dados.endereco)
+    if (dados.estrutura) setEstrutura(dados.estrutura)
+    if (dados.cidade) setCidade(dados.cidade)
+    if (dados.modulos.length > 0) setModulos(dados.modulos)
+    if (dados.inversores.length > 0) {
+      // Tentar achar o inversor completo no banco
+      const invsEncontrados = dados.inversores.map(inv => {
+        const potStr = inv.nome.toLowerCase()
+        const match = Object.keys(db.inversores).find(n =>
+          n.toLowerCase().includes(potStr.replace('k', ''))
+        )
+        return { nome: match || inv.nome, qtd: inv.qtd }
+      })
+      setInversores(invsEncontrados)
+    }
+  }
+
   return (
     <div className="card">
       <div className="card-head">
@@ -98,6 +118,7 @@ export default function Formulario({ db, onCalcular, onAdicionarFila, showToast 
         </div>
       </div>
       <div className="card-body">
+        <PasteInfo onAplicar={applyPasteData} showToast={showToast} />
         <form onSubmit={handleSubmit}>
           <div className="sec-div"><div className="sec-div-line"></div><span className="sec-div-lbl">Dados da Obra</span><div className="sec-div-line"></div></div>
 
