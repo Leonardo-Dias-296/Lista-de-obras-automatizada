@@ -38,15 +38,15 @@ REGRAS_MODULO = {
 
 def _find_db_path():
     candidates = [
-        os.path.join(BASE_DIR, '..', 'database.json'),
         os.path.join(BASE_DIR, 'database.json'),
+        os.path.join(BASE_DIR, '..', 'database.json'),
         os.path.join(os.getcwd(), 'database.json'),
         '/var/task/database.json',
     ]
     for p in candidates:
         if os.path.exists(p):
             return os.path.abspath(p)
-    return os.path.abspath(os.path.join(BASE_DIR, '..', 'database.json'))
+    return os.path.abspath(os.path.join(BASE_DIR, 'database.json'))
 
 _db_path = None
 

@@ -1,5 +1,4 @@
 {
-  "includeFiles": ["database.json"],
   "rewrites": [
     { "source": "/api/(.*)", "destination": "/api/app.py" }
   ]
