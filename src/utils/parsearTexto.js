@@ -1,119 +1,91 @@
 export function parsearTextoColado(texto) {
   const resultado = {
+    equipe: '',
     cliente: '',
-    endereco: '',
     cidade: '',
     modulos: [],
     inversores: [],
-    observacoes: '',
-    estrutura: ''
+    observacoes: ''
   }
 
   if (!texto || !texto.trim()) return resultado
 
   const linhas = texto.split('\n').map(l => l.trim()).filter(l => l)
+  const textoCompleto = linhas.join(' ')
 
-  let modulosQtd = 0
-  let modulosPotencia = 0
-  let inversorQtd = 0
-  let inversorPotencia = 0
-  const obsParts = []
+  // 1. Detectar módulos: "09 módulos 610w", "9x 610w", "9 painéis 550w"
+  const matchModulos = textoCompleto.match(/(\d+)\s*(?:módulos?|paineis?|modulos?|panels?)\s*(?:de\s*)?(\d+)\s*w/i)
+    || textoCompleto.match(/(\d+)\s*x\s*(\d+)\s*w/i)
+  if (matchModulos) {
+    resultado.modulos = [{ qtd: parseInt(matchModulos[1]), potencia: parseInt(matchModulos[2]) }]
+  }
 
+  // 2. Detectar inversor: "01 inv 7.5K", "1 inv 10kw", "2x 5k"
+  const matchInv = textoCompleto.match(/(\d+)\s*(?:inv(?:ersores?)?|inversor)\s*(?:de\s*)?(\d+(?:[.,]\d+)?)\s*k/i)
+    || textoCompleto.match(/(\d+)\s*x\s*(\d+(?:[.,]\d+)?)\s*k/i)
+  if (matchInv) {
+    const qtd = parseInt(matchInv[1])
+    const potencia = parseFloat(matchInv[2].replace(',', '.'))
+    resultado.inversores = [{ qtd, nome: `${potencia}K` }]
+  }
+
+  // 3. Detectar cidade: "Cidade/RS" ou "– Cidade/RS" ou "- Cidade/RS"
+  const matchCidade = textoCompleto.match(/[-–]\s*(\w[\w\s]*?)\s*\/\s*([A-Z]{2})/i)
+  if (matchCidade) {
+    resultado.cidade = matchCidade[1].trim()
+  }
+
+  // 4. Identificar equipe: primeira linha (geralmente entre asteriscos ou com parênteses)
+  const primeiraLinha = linhas[0] || ''
+  if (primeiraLinha.includes('(') && primeiraLinha.includes(')')) {
+    resultado.equipe = primeiraLinha.replace(/\*/g, '').trim()
+  } else if (primeiraLinha.startsWith('*')) {
+    resultado.equipe = primeiraLinha.replace(/\*/g, '').trim()
+  }
+
+  // 5. Identificar cliente: linha que começa com nome antes da primeira vírgula
   for (const linha of linhas) {
-    const lower = linha.toLowerCase()
+    // Pular linha de equipe (já processada)
+    if (linha === primeiraLinha) continue
 
-    // Detectar módulos: "09 módulos 610w", "9 painéis 550w", "12x 610w"
-    const matchModulos = linha.match(/(\d+)\s*(?:módulos?|paineis?|modulos?|panels?)\s*(?:de\s*)?(\d+)\s*w/i)
-    if (matchModulos) {
-      modulosQtd = parseInt(matchModulos[1])
-      modulosPotencia = parseInt(matchModulos[2])
-      continue
-    }
+    // Pular linha de sistema/módulos
+    if (/módulos?|paineis?|inv|sistema/i.test(linha)) continue
 
-    // Detectar módulos: "9x610w", "9 x 610w"
-    const matchModulosX = linha.match(/(\d+)\s*x\s*(\d+)\s*w/i)
-    if (matchModulosX) {
-      modulosQtd = parseInt(matchModulosX[1])
-      modulosPotencia = parseInt(matchModulosX[2])
-      continue
-    }
+    // Pular linha de observações
+    if (/SEPARAD|ATENÇÃO|OBS|NOTA/i.test(linha) && linha.length > 50) continue
 
-    // Detectar inversor: "01 inv 7.5K", "2 inversores 10kw", "1x 5K"
-    const matchInv = linha.match(/(\d+)\s*(?:inv(?:ersores?)?|inversor)\s*(?:de\s*)?(\d+(?:[.,]\d+)?)\s*k/i)
-    if (matchInv) {
-      inversorQtd = parseInt(matchInv[1])
-      inversorPotencia = parseFloat(matchInv[2].replace(',', '.'))
-      continue
-    }
-
-    const matchInvX = linha.match(/(\d+)\s*x\s*(\d+(?:[.,]\d+)?)\s*k/i)
-    if (matchInvX) {
-      inversorQtd = parseInt(matchInvX[1])
-      inversorPotencia = parseFloat(matchInvX[2].replace(',', '.'))
-      continue
-    }
-
-    // Detectar estrutura: "SSM", "PRATYC", "IBRAP", etc
-    const estruturas = ['SSM', 'PRATYC', 'IBRAP', 'RENOVIGI', 'MINI TRILHO', 'OBRA DE SOLO']
-    for (const est of estruturas) {
-      if (lower.includes(est.toLowerCase())) {
-        resultado.estrutura = est
+    // Se tem vírgula, o cliente é tudo antes da primeira vírgula
+    if (linha.includes(',')) {
+      const antesVirgula = linha.split(',')[0].trim()
+      if (antesVirgula.length > 2 && !/^\d/.test(antesVirgula)) {
+        resultado.cliente = antesVirgula
         break
       }
     }
 
-    // Detectar cidade: padrão "Cidade/UF"
-    const matchCidade = linha.match(/(\w[\w\s]*?)\s*[-–]\s*(\w[\w\s]*?)\s*\/\s*([A-Z]{2})/i)
-    if (matchCidade) {
-      resultado.cidade = matchCidade[2].trim()
-      continue
+    // Se não tem vírgula e parece nome (sem números e não é cidade)
+    if (!/\d/.test(linha) && !/\/[A-Z]{2}/.test(linha) && linha.length > 3 && linha.length < 60) {
+      // Pular linhas que são só observações
+      if (!/SEPARAD|JÁ|SISTEMA|MÓDULO/i.test(linha)) {
+        resultado.cliente = linha
+        break
+      }
     }
+  }
 
-    // Detectar endereço: Rua, Av, Trav, etc
-    const matchEndereco = linha.match(/((?:Rua|Av|Avenida|Trav|Travessa|Al|Alameda|Rod|Rodovia|Estrada|R\.)[\s\S]*?)(?:\s*[-–]\s*Bairro|\s*[-–]\s*\d|\s*,\s*\d)/i)
-    if (matchEndereco) {
-      resultado.endereco = linha
-      continue
-    }
+  // 6. Observações: tudo que sobrou e parece relevante
+  const obsParts = []
+  for (const linha of linhas) {
+    if (linha === primeiraLinha) continue
+    if (/módulos?|paineis?/i.test(linha) && /\d+\s*w/i.test(linha)) continue
+    if (/inv|inversor/i.test(linha) && /\d+\s*k/i.test(linha)) continue
+    if (linha === resultado.cliente) continue
+    if (linha.includes(',') && linha.split(',')[0].trim() === resultado.cliente) continue
 
-    // Detectar cliente: linhas com * ou que parecem nome (sem números de rua)
-    if (linha.startsWith('*') && linha.endsWith('*')) {
-      resultado.cliente = linha.replace(/\*/g, '').trim()
-      continue
-    }
-
-    if (linha.startsWith('*')) {
-      resultado.cliente = linha.replace(/\*/g, '').trim()
-      continue
-    }
-
-    // Se a linha não tem números e não foi classificada, pode ser nome do cliente
-    if (!resultado.cliente && !/\d/.test(linha) && linha.length > 3 && linha.length < 80) {
-      resultado.cliente = linha
-      continue
-    }
-
-    // Se chegou até aqui, é observação
-    if (lower.includes('já') || lower.includes('separad') || lower.includes('atenção') ||
-        lower.includes('obs') || lower.includes('nota') || lower.includes('levar') ||
-        lower.includes('não') || lower.includes('sistema') || lower.includes('preto') ||
-        lower.includes('branco') || linha.includes('–') || linha.includes('-')) {
+    if (/SEPARAD|JÁ|PRETO|BRANCO|ATENÇÃO|OBS|SISTEMA|kit|local/i.test(linha)) {
       obsParts.push(linha)
     }
   }
-
-  // Montar módulos
-  if (modulosQtd > 0 && modulosPotencia > 0) {
-    resultado.modulos = [{ potencia: modulosPotencia, qtd: modulosQtd }]
-  }
-
-  // Montar inversores
-  if (inversorQtd > 0 && inversorPotencia > 0) {
-    // Tentar encontrar o nome do inversor no DB baseado na potência
-    resultado.inversores = [{ nome: `${inversorPotencia}K`, qtd: inversorQtd }]
-  }
-
-  // Observações juntas
   resultado.observacoes = obsParts.join(' ')
 
   return resultado

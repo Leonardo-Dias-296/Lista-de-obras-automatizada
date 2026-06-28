@@ -90,18 +90,17 @@ export default function Formulario({ db, onCalcular, onAdicionarFila, showToast 
   }
 
   function applyPasteData(dados) {
+    if (dados.equipe) setEquipe(dados.equipe)
     if (dados.cliente) setCliente(dados.cliente)
-    if (dados.endereco) setCodObra(dados.endereco)
-    if (dados.estrutura) setEstrutura(dados.estrutura)
     if (dados.cidade) setCidade(dados.cidade)
     if (dados.modulos.length > 0) setModulos(dados.modulos)
     if (dados.inversores.length > 0) {
-      // Tentar achar o inversor completo no banco
       const invsEncontrados = dados.inversores.map(inv => {
-        const potStr = inv.nome.toLowerCase()
-        const match = Object.keys(db.inversores).find(n =>
-          n.toLowerCase().includes(potStr.replace('k', ''))
-        )
+        const potencia = inv.nome.replace('k', '').replace('K', '').replace(',', '.')
+        const match = Object.keys(db.inversores).find(n => {
+          const nLower = n.toLowerCase()
+          return nLower.includes(potencia) || nLower.includes(`${potencia}k`) || nLower.includes(`${potencia} kw`)
+        })
         return { nome: match || inv.nome, qtd: inv.qtd }
       })
       setInversores(invsEncontrados)
