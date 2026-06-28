@@ -36,18 +36,37 @@ REGRAS_MODULO = {
     "Placa propaganda G":                   lambda m: 1 if m >= 30 else 0,
 }
 
+def _find_db_path():
+    candidates = [
+        os.path.join(BASE_DIR, '..', 'database.json'),
+        os.path.join(BASE_DIR, 'database.json'),
+        os.path.join(os.getcwd(), 'database.json'),
+        '/var/task/database.json',
+    ]
+    for p in candidates:
+        if os.path.exists(p):
+            return os.path.abspath(p)
+    return os.path.abspath(os.path.join(BASE_DIR, '..', 'database.json'))
+
+_db_path = None
+
+def _get_db_path():
+    global _db_path
+    if _db_path is None:
+        _db_path = _find_db_path()
+    return _db_path
+
 def load_db():
-    db_path = os.path.join(BASE_DIR, '..', 'database.json')
-    if not os.path.exists(db_path):
-        db_path = os.path.join(BASE_DIR, 'database.json')
-    with open(db_path, 'r', encoding='utf-8') as f:
+    path = _get_db_path()
+    if not os.path.exists(path):
+        return {"cidades": {}, "estruturas": {}, "inversores": {}, "produtos": {}, "itensFixos": []}
+    with open(path, 'r', encoding='utf-8') as f:
         return json.load(f)
 
 def save_db(data):
-    db_path = os.path.join(BASE_DIR, '..', 'database.json')
-    if not os.path.exists(os.path.dirname(db_path)):
-        db_path = os.path.join(BASE_DIR, 'database.json')
-    with open(db_path, 'w', encoding='utf-8') as f:
+    path = _get_db_path()
+    os.makedirs(os.path.dirname(path), exist_ok=True)
+    with open(path, 'w', encoding='utf-8') as f:
         json.dump(data, f, ensure_ascii=False, indent=2)
 
 def calcular_quantidades(modulos_lista, inversores, cidade_nome, db):
