@@ -1,19 +1,16 @@
 from flask import Flask, request, send_file, jsonify
 from flask_cors import CORS
 import traceback
-import openpyxl
 import json
 import io
 import os
 import tempfile
 from datetime import datetime
-from fpdf import FPDF
-from calcular import load_db, save_db, calcular_quantidades, normalize_name, BASE_DIR
 
 app = Flask(__name__)
 CORS(app)
 
-REPO_DIR = os.path.join(BASE_DIR, '..')
+REPO_DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)), '..')
 
 @app.route('/')
 def index():
@@ -25,12 +22,16 @@ def handle_exception(e):
 
 @app.route('/api/config')
 def config():
+    from calcular import load_db
     db = load_db()
     return jsonify(db)
 
 @app.route('/api/gerar', methods=['POST'])
 def gerar():
     try:
+        import openpyxl
+        from calcular import load_db, calcular_quantidades, normalize_name, BASE_DIR
+
         data = request.get_json()
 
         cliente     = data.get('cliente', '').strip()
@@ -148,13 +149,13 @@ def gerar():
         )
 
     except Exception as e:
-        import traceback
         traceback.print_exc()
         return jsonify({'erro': str(e)}), 500
 
 @app.route('/api/preview', methods=['POST'])
 def preview():
     try:
+        from calcular import load_db, calcular_quantidades
         data       = request.get_json()
         modulos    = data.get('modulos', [])
         inversores = data.get('inversores', [])
@@ -185,6 +186,7 @@ def get_stats():
 
 @app.route('/api/gerar_pdf', methods=['POST'])
 def gerar_pdf():
+    from fpdf import FPDF
     dados = request.json
     cliente = dados.get('cliente', 'Cliente')
     equipe = dados.get('equipe', '—')
@@ -252,11 +254,13 @@ def download_arquivo(filename):
 
 @app.route('/api/banco', methods=['GET'])
 def get_banco():
+    from calcular import load_db
     return jsonify(load_db())
 
 @app.route('/api/banco', methods=['POST'])
 def save_banco():
     try:
+        from calcular import save_db
         novo = request.get_json()
         save_db(novo)
         return jsonify({'status': 'ok'})
@@ -266,6 +270,9 @@ def save_banco():
 @app.route('/api/gerar_lote', methods=['POST'])
 def gerar_lote():
     try:
+        import openpyxl
+        from calcular import load_db, calcular_quantidades, normalize_name, BASE_DIR
+
         data_list = request.get_json()
         if not data_list or not isinstance(data_list, list):
             return jsonify({'erro': 'Lista de projetos inválida'}), 400
@@ -396,13 +403,12 @@ def gerar_lote():
         )
 
     except Exception as e:
-        import traceback
         traceback.print_exc()
         return jsonify({'erro': str(e)}), 500
 
 def log_history(dados):
     try:
-        history_path = os.path.join(BASE_DIR, '..', 'history.json')
+        history_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', 'history.json')
         historico = []
         if os.path.exists(history_path):
             with open(history_path, 'r', encoding='utf-8') as f:
