@@ -20,8 +20,12 @@ def index():
 
 @app.route('/api/config')
 def config():
-    db = load_db()
-    return jsonify(db)
+    try:
+        db = load_db()
+        return jsonify(db)
+    except Exception as e:
+        import traceback
+        return jsonify({"error": str(e), "traceback": traceback.format_exc()}), 500
 
 @app.route('/api/gerar', methods=['POST'])
 def gerar():
