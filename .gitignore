@@ -7,3 +7,7 @@ saidas/
 
 .vercel
 .env*
+
+# Dados sensíveis (LGPD)
+history.json
+database.json

@@ -9,7 +9,7 @@ import tempfile
 from datetime import datetime
 
 app = Flask(__name__)
-CORS(app)
+CORS(app, origins=["https://antigravity.vercel.app", "http://localhost:5173", "http://localhost:5000"])
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 REPO_DIR = os.path.join(BASE_DIR, '..')
@@ -26,7 +26,9 @@ def index():
 
 @app.errorhandler(Exception)
 def handle_exception(e):
-    return jsonify({"error": str(e), "traceback": traceback.format_exc()}), 500
+    import logging
+    logging.error(f"Erro na API: {e}", exc_info=True)
+    return jsonify({"error": "Erro interno do servidor"}), 500
 
 @app.route('/api/config')
 def config():
@@ -411,4 +413,6 @@ def gerar_lote():
         return jsonify({'erro': str(e)}), 500
 
 if __name__ == '__main__':
-    app.run(port=5000, debug=True)
+    import os
+    debug = os.environ.get("FLASK_DEBUG", "false").lower() == "true"
+    app.run(port=5000, debug=debug)

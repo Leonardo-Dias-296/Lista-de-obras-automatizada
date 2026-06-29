@@ -7,7 +7,7 @@ import os
 from datetime import datetime
 from fpdf import FPDF
 
-app = Flask(__name__, static_folder='.', static_url_path='')
+app = Flask(__name__, static_folder='public', static_url_path='/static')
 
 # ─── Diretório base (garante caminhos corretos em qualquer cwd) ───────────────
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
@@ -118,9 +118,56 @@ def calcular_quantidades(modulos_lista, inversores, cidade_nome, db):
     return quantidades
 
 # ─── Log de Histórico para Relatórios ─────────────────────────────────────────
-def log_history(dados):
-    """Salva os dados do orçamento no histórico para relatórios."""
+import hashlib
+
+def anonimizar_nome(nome):
+    """Cria hash do nome para anonimização LGPD."""
+    if not nome:
+        return "ANONIMO"
+    hash_obj = hashlib.md5(f"ssm_{nome}".encode())
+    return f"Cliente_{hash_obj.hexdigest()[:8].upper()}"
+
+def limpar_historico_antigo():
+    """Remove registros com mais de 6 meses (política de retenção LGPD)."""
     try:
+        caminho = os.path.join(BASE_DIR, 'history.json')
+        if not os.path.exists(caminho):
+            return
+        
+        with open(caminho, 'r', encoding='utf-8') as f:
+            historico = json.load(f)
+        
+        data_limite = datetime.now().replace(month=datetime.now().month - 6 if datetime.now().month > 6 else datetime.now().month + 6)
+        if datetime.now().month <= 6:
+            data_limite = data_limite.replace(year=datetime.now().year - 1)
+        
+        historico_filtrado = []
+        for entry in historico:
+            ts = entry.get('ts_geracao', '')
+            if ts:
+                try:
+                    data_entry = datetime.strptime(ts, '%Y-%m-%d %H:%M:%S')
+                    if data_entry >= data_limite:
+                        historico_filtrado.append(entry)
+                except:
+                    historico_filtrado.append(entry)
+            else:
+                historico_filtrado.append(entry)
+        
+        with open(caminho, 'w', encoding='utf-8') as f:
+            json.dump(historico_filtrado, f, ensure_ascii=False, indent=2)
+        
+        removidos = len(historico) - len(historico_filtrado)
+        if removidos > 0:
+            print(f"[LGPD] {removidos} registros antigos removidos do histórico")
+    except Exception as e:
+        print(f"[ERRO] Falha ao limpar histórico: {e}")
+
+def log_history(dados):
+    """Salva os dados do orçamento no histórico para relatórios (LGPD compliant)."""
+    try:
+        limpar_historico_antigo()
+        
         caminho = os.path.join(BASE_DIR, 'history.json')
         historico = []
         if os.path.exists(caminho):
@@ -130,11 +177,15 @@ def log_history(dados):
         # Se for um lote, dados é uma lista; se for unitário, um dict
         if isinstance(dados, list):
             for item in dados:
-                item['ts_geracao'] = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
-            historico.extend(dados)
+                item_anon = item.copy()
+                item_anon['cliente'] = anonimizar_nome(item.get('cliente', ''))
+                item_anon['ts_geracao'] = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
+                historico.append(item_anon)
         else:
-            dados['ts_geracao'] = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
-            historico.append(dados)
+            dados_anon = dados.copy()
+            dados_anon['cliente'] = anonimizar_nome(dados.get('cliente', ''))
+            dados_anon['ts_geracao'] = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
+            historico.append(dados_anon)
             
         with open(caminho, 'w', encoding='utf-8') as f:
             json.dump(historico, f, ensure_ascii=False, indent=2)
@@ -145,6 +196,10 @@ def log_history(dados):
 @app.route('/')
 def index():
     return send_file('index.html')
+
+@app.route('/privacidade')
+def privacidade():
+    return send_file(os.path.join(BASE_DIR, 'public', 'privacidade.html'))
 
 @app.route('/api/config')
 def config():
@@ -320,12 +375,16 @@ def deletar_arquivo(filename):
     try:
         pasta = os.path.join(BASE_DIR, 'saidas')
         caminho = os.path.join(pasta, filename)
+        caminho_real = os.path.realpath(caminho)
+        pasta_real = os.path.realpath(pasta)
+        if not caminho_real.startswith(pasta_real):
+            return jsonify({'erro': 'Acesso negado'}), 403
         if os.path.exists(caminho):
             os.remove(caminho)
             return jsonify({'status': 'ok'})
         return jsonify({'erro': 'Arquivo não encontrado'}), 404
     except Exception as e:
-        return jsonify({'erro': str(e)}), 500
+        return jsonify({'erro': 'Erro ao processar solicitação'}), 500
 
 @app.route('/api/stats')
 def get_stats():
@@ -426,6 +485,10 @@ def download_arquivo(filename):
     """Download de um arquivo salvo anteriormente."""
     pasta = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'saidas')
     caminho = os.path.join(pasta, filename)
+    caminho_real = os.path.realpath(caminho)
+    pasta_real = os.path.realpath(pasta)
+    if not caminho_real.startswith(pasta_real):
+        return jsonify({'erro': 'Acesso negado'}), 403
     if not os.path.exists(caminho):
         return jsonify({'erro': 'Arquivo não encontrado'}), 404
     return send_file(caminho, as_attachment=True, download_name=filename,
