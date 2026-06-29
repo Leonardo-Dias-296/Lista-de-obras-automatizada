@@ -80,7 +80,7 @@ def gerar():
         preencher_ajustado(6, "Paineis (Qtde/Potencia): ", modulos_str)
         preencher_ajustado(7, "Cód obra: ", cod_obra)
         if estrutura:
-            preencher_ajustado(8, "Código: ", estrutura)
+            ws.cell(row=8, column=1).value = f"Cód.: {estrutura}"
 
         ws.cell(row=1, column=1).value = estrutura if estrutura else "SSM"
 
@@ -332,7 +332,7 @@ def gerar_lote():
             preencher_ajustado(new_ws, 6, "Paineis (Qtde/Potencia): ", modulos_str)
             preencher_ajustado(new_ws, 7, "Cód obra: ", cod_obra)
             if estrutura:
-                preencher_ajustado(new_ws, 8, "Código: ", estrutura)
+                new_ws.cell(row=8, column=1).value = f"Cód.: {estrutura}"
 
             new_ws.cell(row=1, column=1).value = estrutura if estrutura else "SSM"
 
