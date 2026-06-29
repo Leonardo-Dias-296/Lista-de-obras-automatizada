@@ -47,23 +47,27 @@ export default function Configuracoes({ db, onSalvar, showToast }) {
 
   async function salvarInversor() {
     if (!invNome.trim()) return showToast('Informe o nome do inversor', 'error')
+    try {
+      const novoDb = { ...db }
+      novoDb.inversores = { ...db.inversores }
 
-    const novoDb = { ...db }
-    novoDb.inversores = { ...db.inversores }
+      if (invNomeOriginal && invNomeOriginal !== invNome && !invIsCopy) {
+        delete novoDb.inversores[invNomeOriginal]
+      }
 
-    if (invNomeOriginal && invNomeOriginal !== invNome && !invIsCopy) {
-      delete novoDb.inversores[invNomeOriginal]
+      novoDb.inversores[invNome] = {
+        disjuntor_ca: invDisjCA,
+        disjuntor_cc: invDisjCC,
+        materiais: invMateriais.filter(m => m.nome)
+      }
+
+      await onSalvar(novoDb)
+      setModalInversor(false)
+      showToast('Inversor salvo!', 'success')
+    } catch (err) {
+      console.error('Erro ao salvar inversor:', err)
+      showToast('Erro ao salvar inversor. Verifique o servidor.', 'error')
     }
-
-    novoDb.inversores[invNome] = {
-      disjuntor_ca: invDisjCA,
-      disjuntor_cc: invDisjCC,
-      materiais: invMateriais.filter(m => m.nome)
-    }
-
-    await onSalvar(novoDb)
-    setModalInversor(false)
-    showToast('Inversor salvo!', 'success')
   }
 
   function deletarInversor(nome) {
@@ -88,22 +92,26 @@ export default function Configuracoes({ db, onSalvar, showToast }) {
 
   async function salvarCidade() {
     if (!cidNome.trim()) return showToast('Informe o nome da cidade', 'error')
+    try {
+      const novoDb = { ...db }
+      novoDb.cidades = { ...db.cidades }
 
-    const novoDb = { ...db }
-    novoDb.cidades = { ...db.cidades }
+      if (cidNomeOriginal && cidNomeOriginal !== cidNome) {
+        delete novoDb.cidades[cidNomeOriginal]
+      }
 
-    if (cidNomeOriginal && cidNomeOriginal !== cidNome) {
-      delete novoDb.cidades[cidNomeOriginal]
+      const naoadicionar = Object.entries(cidPlacas)
+        .filter(([_, checked]) => !checked)
+        .map(([nome]) => ({ nome }))
+
+      novoDb.cidades[cidNome] = { naoadicionar }
+      await onSalvar(novoDb)
+      setModalCidade(false)
+      showToast('Cidade salva!', 'success')
+    } catch (err) {
+      console.error('Erro ao salvar cidade:', err)
+      showToast('Erro ao salvar cidade. Verifique o servidor.', 'error')
     }
-
-    const naoadicionar = Object.entries(cidPlacas)
-      .filter(([_, checked]) => !checked)
-      .map(([nome]) => ({ nome }))
-
-    novoDb.cidades[cidNome] = { naoadicionar }
-    await onSalvar(novoDb)
-    setModalCidade(false)
-    showToast('Cidade salva!', 'success')
   }
 
   function deletarCidade(nome) {

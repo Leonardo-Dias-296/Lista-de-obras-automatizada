@@ -69,7 +69,7 @@ export function useAPI() {
       body: JSON.stringify(novoDb)
     })
     if (!r.ok) throw new Error('Erro ao salvar')
-    await carregarConfig()
+    setDb(novoDb)
     return r.json()
   }
 
