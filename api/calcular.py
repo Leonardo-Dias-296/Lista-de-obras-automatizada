@@ -2,8 +2,14 @@ import math
 import unicodedata
 import json
 import os
+import urllib.request
+import urllib.error
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+
+KV_URL = os.environ.get('KV_REST_API_URL', '')
+KV_TOKEN = os.environ.get('KV_REST_API_TOKEN', '')
+KV_KEY = 'ssm-database'
 
 def normalize_name(name):
     if not name:
@@ -56,14 +62,43 @@ def _get_db_path():
         _db_path = _find_db_path()
     return _db_path
 
+DEFAULT_DB = {"cidades": {}, "estruturas": {}, "inversores": {}, "produtos": {}, "itensFixos": []}
+
+def _kv_request(method, path, body=None):
+    if not KV_URL or not KV_TOKEN:
+        return None
+    url = f"{KV_URL}/{path}"
+    data = json.dumps(body).encode('utf-8') if body else None
+    req = urllib.request.Request(url, data=data, method=method)
+    req.add_header('Authorization', f'Bearer {KV_TOKEN}')
+    if body:
+        req.add_header('Content-Type', 'application/json')
+    try:
+        with urllib.request.urlopen(req, timeout=10) as resp:
+            return json.loads(resp.read().decode('utf-8'))
+    except Exception:
+        return None
+
 def load_db():
+    if KV_URL and KV_TOKEN:
+        result = _kv_request('GET', f'get/{KV_KEY}')
+        if result and result.get('result'):
+            val = result['result']
+            if isinstance(val, str):
+                return json.loads(val)
+            return val
     path = _get_db_path()
     if not os.path.exists(path):
-        return {"cidades": {}, "estruturas": {}, "inversores": {}, "produtos": {}, "itensFixos": []}
+        return DEFAULT_DB.copy()
     with open(path, 'r', encoding='utf-8') as f:
         return json.load(f)
 
 def save_db(data):
+    if KV_URL and KV_TOKEN:
+        body = {'key': KV_KEY, 'value': json.dumps(data, ensure_ascii=False)}
+        result = _kv_request('POST', 'set', body)
+        if result and result.get('result') == 'OK':
+            return
     path = _get_db_path()
     os.makedirs(os.path.dirname(path), exist_ok=True)
     with open(path, 'w', encoding='utf-8') as f:
