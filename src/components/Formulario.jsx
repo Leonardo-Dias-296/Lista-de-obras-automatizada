@@ -64,7 +64,17 @@ export default function Formulario({ db, onCalcular, onAdicionarFila, showToast 
     if (!totalModulos || inversores.every(i => !i.nome) || !cidade) {
       return showToast('Preencha Módulos, Inversores e Cidade', 'error')
     }
-    onCalcular({ modulos, inversores, cidade })
+    onCalcular({
+      cliente,
+      data,
+      equipe,
+      cod_obra: codObra,
+      modulos,
+      inversores,
+      extras: extras.filter(e => e.nome),
+      cidade,
+      estrutura
+    })
   }
 
   function handleSubmit(e) {

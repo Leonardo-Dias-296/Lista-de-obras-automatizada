@@ -13,6 +13,9 @@ export default function App() {
   const [aba, setAba] = useState('calc')
   const [toast, setToast] = useState({ show: false, msg: '', tipo: 'success' })
   const [previewData, setPreviewData] = useState(null)
+  const [excelData, setExcelData] = useState(null)
+  const [excelBlob, setExcelBlob] = useState(null)
+  const [excelFileName, setExcelFileName] = useState('')
   const [fila, setFila] = useState([])
   const [arquivos, setArquivos] = useState([])
 
@@ -34,10 +37,25 @@ export default function App() {
 
   async function handleCalcularPreview(dados) {
     try {
-      const result = await calcularPreview(dados)
+      const result = await calcularPreview({ modulos: dados.modulos, inversores: dados.inversores, cidade: dados.cidade })
       setPreviewData(result)
+      setExcelData(dados)
+      setExcelBlob(null)
     } catch (e) {
       showToast('Erro ao calcular prévia', 'error')
+    }
+  }
+
+  async function handleGerarPlanilha(dados) {
+    try {
+      showToast('Gerando planilha...')
+      const blob = await gerarOrcamento(dados)
+      const fileName = `SSM_${(dados.cliente || 'Cliente').replace(/\s+/g, '_')}_${dados.data || 'sem_data'}.xlsx`
+      setExcelBlob(blob)
+      setExcelFileName(fileName)
+      showToast('Planilha gerada com sucesso!')
+    } catch (e) {
+      showToast('Erro ao gerar planilha', 'error')
     }
   }
 
@@ -128,7 +146,14 @@ export default function App() {
             />
             <div className="sticky-r">
               <Fila fila={fila} setFila={setFila} onGerarLote={handleGerarLote} />
-              <Preview data={previewData} onGerarPDF={handleGerarPDF} />
+              <Preview
+                data={previewData}
+                excelBlob={excelBlob}
+                excelFileName={excelFileName}
+                formData={excelData}
+                onGerarPDF={handleGerarPDF}
+                onGerarPlanilha={handleGerarPlanilha}
+              />
               <Arquivos arquivos={arquivos} onAtualizar={atualizarArquivos} onDeletar={deletarArquivo} />
             </div>
           </div>
