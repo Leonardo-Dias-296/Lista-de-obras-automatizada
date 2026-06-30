@@ -7,9 +7,17 @@ import urllib.error
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 
+REDIS_URL = os.environ.get('REDIS_URL', '')
 KV_URL = os.environ.get('KV_REST_API_URL', '')
 KV_TOKEN = os.environ.get('KV_REST_API_TOKEN', '')
-KV_KEY = 'ssm-database'
+KV_KEY = 'lista-database'
+
+if not KV_URL and REDIS_URL:
+    import re
+    match = re.match(r'redis://default:(.+?)@(.+?):\d+', REDIS_URL)
+    if match:
+        KV_TOKEN = match.group(1)
+        KV_URL = f"https://{match.group(2)}"
 
 def normalize_name(name):
     if not name:
