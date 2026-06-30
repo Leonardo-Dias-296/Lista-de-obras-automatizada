@@ -14,10 +14,12 @@ KV_KEY = 'lista-database'
 
 if not KV_URL and REDIS_URL:
     import re
-    match = re.match(r'redis://default:(.+?)@(.+?):\d+', REDIS_URL)
+    match = re.match(r'redis[s]?://default:(.+?)@(.+?):\d+', REDIS_URL)
     if match:
         KV_TOKEN = match.group(1)
         KV_URL = f"https://{match.group(2)}"
+
+print(f"[KV] URL={'SET' if KV_URL else 'NONE'} TOKEN={'SET' if KV_TOKEN else 'NONE'}")
 
 def normalize_name(name):
     if not name:
@@ -84,7 +86,8 @@ def _kv_request(method, path, body=None):
     try:
         with urllib.request.urlopen(req, timeout=10) as resp:
             return json.loads(resp.read().decode('utf-8'))
-    except Exception:
+    except Exception as e:
+        print(f"[KV ERROR] {method} {url}: {e}")
         return None
 
 def load_db():
@@ -103,8 +106,8 @@ def load_db():
 
 def save_db(data):
     if KV_URL and KV_TOKEN:
-        body = {'key': KV_KEY, 'value': json.dumps(data, ensure_ascii=False)}
-        result = _kv_request('POST', 'set', body)
+        body = {'value': json.dumps(data, ensure_ascii=False)}
+        result = _kv_request('POST', f'set/{KV_KEY}', body)
         if result and result.get('result') == 'OK':
             return
     path = _get_db_path()
