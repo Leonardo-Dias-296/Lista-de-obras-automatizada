@@ -39,14 +39,25 @@ export default function Preview({ data, excelBlob, excelFileName, formData, onGe
   async function handleVisualizar() {
     if (!excelBlob) return
 
-    const url = URL.createObjectURL(excelBlob)
-    const a = document.createElement('a')
-    a.href = url
-    a.download = excelFileName || 'planilha.xlsx'
-    document.body.appendChild(a)
-    a.click()
-    document.body.removeChild(a)
-    URL.revokeObjectURL(url)
+    try {
+      const formData = new FormData()
+      formData.append('file', excelBlob, excelFileName || 'planilha.xlsx')
+
+      const r = await fetch('https://0x0.st', { method: 'POST', body: formData })
+      if (!r.ok) throw new Error('Erro ao enviar arquivo')
+
+      const fileUrl = (await r.text()).trim()
+      const viewerUrl = `https://view.officeapps.live.com/op/view.aspx?src=${encodeURIComponent(fileUrl)}`
+      window.open(viewerUrl, '_blank')
+    } catch (err) {
+      console.error('Erro ao abrir no Excel Online:', err)
+      const url = URL.createObjectURL(excelBlob)
+      const a = document.createElement('a')
+      a.href = url
+      a.download = excelFileName || 'planilha.xlsx'
+      a.click()
+      URL.revokeObjectURL(url)
+    }
   }
 
   if (!data || Object.keys(data).length === 0) {
@@ -123,7 +134,7 @@ export default function Preview({ data, excelBlob, excelFileName, formData, onGe
           )}
           {ready && (
             <button className="btn btn-primary" onClick={handleVisualizar} style={{ background: '#217346' }}>
-              📊 Abrir no Excel
+              📊 Abrir no Excel Online
             </button>
           )}
           {ready && (
